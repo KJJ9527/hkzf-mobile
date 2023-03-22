@@ -1,0 +1,37 @@
+.navwrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 30rem;
+  display: flex;
+  justify-content: space-between;
+  line-height: 60rem;
+  z-index: 999;
+  .mylocation {
+    margin:0 20rem;
+    .iconfont {
+      font-size: 1rem;
+    }
+  }
+  .search {
+    position: relative;
+    i {
+      position: absolute;
+      font-size: 1rem;
+      padding-left: 10rem;
+    }
+    input {
+      outline: none;
+      border: none;
+      text-indent: 60rem;
+      width: 520rem;
+      height: 60rem;
+    }
+  }
+  .map {
+    margin: 0 20rem;
+    i {
+      font-size: 48rem;
+    }
+  }
+}

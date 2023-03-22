@@ -1,0 +1,51 @@
+{
+  "id": "3916558",
+  "name": "navbar2.0",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1161668",
+      "name": "mine",
+      "font_class": "mine2",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "970715",
+      "name": "location",
+      "font_class": "location",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "6664136",
+      "name": "bottom",
+      "font_class": "bottom",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "109785",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e648",
+      "unicode_decimal": 58952
+    },
+    {
+      "icon_id": "1492012",
+      "name": "home_light",
+      "font_class": "home_light",
+      "unicode": "e7d4",
+      "unicode_decimal": 59348
+    },
+    {
+      "icon_id": "7275380",
+      "name": "Message",
+      "font_class": "Message",
+      "unicode": "e690",
+      "unicode_decimal": 59024
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+// 轮播图
+.content {
+  img {
+    width: 100%;
+    height: 100%;
+    // 去掉图片下方的空隙
+    vertical-align: middle;
+  }
+}
+// 导航菜单
+.navMenu {
+  display: flex;
+  margin: 30rem;
+  justify-content: space-between;
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: 120rem;
+    }
+    span {
+      margin-top: 10rem;
+    }
+  }
+}
+// 租房小组
+.rentTeam {
+  margin: 30rem;
+  .navtitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navtitle p:first-child {
+    font-size: 28rem;
+    font-weight: bold;
+  }
+  .grid-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    .leftwrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .title {
+        font-weight: bold;
+      }
+    }
+    img {
+      width: 124rem;
+    }
+  }
+}
+// 最新资讯
+.newmessage {
+  margin: 30rem;
+  padding-bottom: 100rem;
+  .navtitle {
+    font-size: 28rem;
+    font-weight: bold;
+  }
+  .news {
+    display: flex;
+    padding-bottom: 20rem;
+    .leftwrapper img {
+      width: 220rem;
+    }
+    .rightwrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: 20rem;
+      p {
+        font-weight: bold;
+        margin: 0;
+      }
+    }
+    .bottomwrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
