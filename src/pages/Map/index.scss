@@ -1,3 +1,43 @@
 #container {
-  height: 100%
+  height: 100%;
+}
+.cityListwrapper {
+  display: none;
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  .header {
+    height: 80rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30rem;
+    background-color: #ccc;
+    button {
+      border: none;
+      background-color: #ccc;
+    }
+  }
+  .contentwrapper {
+    height: 680rem;
+    overflow-y: auto;
+    .content {
+      display: flex;
+      border-bottom: 1px solid #ccc;
+      padding: 30rem;
+      .right {
+        img {
+          width: 280rem;
+        }
+      }
+      .left {
+        margin-left: 50rem;
+      }
+    }
+  }
+}
+.showList {
+  display: block;
 }

@@ -36,28 +36,27 @@ const CityList = () => {
   // 创建List组件的ref对象
   const cityListComponent = useRef(null)
   useEffect(() => {
-    // 城市列表
-    const getCityData = async () => {
-      const res = await http.get('/city?level=1')
-      const cityListBody = res.data.body
-      const { cityList, cityIndex } = formatCityList(cityListBody)
-      // 1.获取热门城市数据
-      const hotRes = await http.get('/hot')
-      // 2.将数据添加到 cityList中
-      cityList['hot'] = hotRes.data.body
-      // 3.将索引添加到cityIndex中
-      cityIndex.unshift('hot')
-      // 获取当前定位城市
-      const currentCity = await getCurrentCity()
-      // 注意应存入数组格式
-      cityList['#'] = [currentCity]
-      cityIndex.unshift('#')
-      setCityList(cityList)
-      setCityIndex(cityIndex)
-    }
     getCityData()
   }, [])
-
+  // 城市列表
+  const getCityData = async () => {
+    const res = await http.get('/city?level=1')
+    const cityListBody = res.data.body
+    const { cityList, cityIndex } = formatCityList(cityListBody)
+    // 1.获取热门城市数据
+    const hotRes = await http.get('/hot')
+    // 2.将数据添加到 cityList中
+    cityList['hot'] = hotRes.data.body
+    // 3.将索引添加到cityIndex中
+    cityIndex.unshift('hot')
+    // 获取当前定位城市
+    const currentCity = await getCurrentCity()
+    // 注意应存入数组格式
+    cityList['#'] = [currentCity]
+    cityIndex.unshift('#')
+    setCityList(cityList)
+    setCityIndex(cityIndex)
+  }
   // 调用 measureAllRows，提前计算 List 中每一行的高度，实现 scrollToRow的精确跳转
   // 注意：调用这个方法的时候，需要保证List组件中已经有数据了!如果组件中的数据为空，就会调用方法报错
   // 解决：保证 measureAllRows 方法是在获取到数据之后调用

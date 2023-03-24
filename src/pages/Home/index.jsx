@@ -42,19 +42,19 @@ const navMenuList = [
 const Home = () => {
   const navigate = useNavigate()
   useEffect(() => {
+    // 获取当前位置
+    const currentData = JSON.parse(localStorage.getItem('hkzf_city'))
     const getHomeData = async () => {
       //获取轮播图
       const wiperRes = await http.get('/swiper')
       const swiperData = wiperRes.data.body
       setSwiperList(swiperData)
       // 获取租房小组
-      const rentTeamRes = await http.get(
-        '/groups?area=AREA%7C88cff55c-aaa4-e2e0'
-      )
+      const rentTeamRes = await http.get(`/groups?area=${currentData.value}`)
       const rentTeamData = rentTeamRes.data.body
       setRentTeamList(rentTeamData)
       // 获取最新资讯
-      const newsRes = await http.get('/news?area=AREA%7C88cff55c-aaa4-e2e0')
+      const newsRes = await http.get(`/news?area=${currentData.value}`)
       const NewsData = newsRes.data.body
       setNewsList(NewsData)
     }
@@ -76,7 +76,7 @@ const Home = () => {
   // 渲染导航菜单
   const renderNavMenu = () => {
     return navMenuList.map((item) => (
-      <div key={item.key} onClick={() => navMenuTo(item.key)}>
+      <div key={item.key} onClick={() => toNavMenu(item.key)}>
         <img alt="" src={item.imgSrc} />
         <span>{item.title}</span>
       </div>
@@ -118,7 +118,7 @@ const Home = () => {
     ))
   }
   // 跳转路由
-  const navMenuTo = (key) => navigate(key)
+  const toNavMenu = (key) => navigate(key)
   return (
     <>
       {/* 顶部导航 */}
